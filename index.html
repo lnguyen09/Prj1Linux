@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>My Website</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="quiz.css">
+    <script type="text/javascript" src="makeJoke.js"></script>
+    <script type="text/javascript" src="makeSuggestion.js"></script>
+    <script type="text/javascript" src="makeTrivia.js"></script>
+  </head>
+  <body>
+    <h1 class="title">Website for the bored people</h1>
+    <div class="container">
+      <div class="section">
+        <div class="section-content">
+          <h2>Want a suggestion on what to do? </h2>
+          <button class="button" onclick="makeSuggestion()">Click me!</button>
+          <div id="suggestion"></div>
+        </div>
+      </div>
+      <div class="section">
+        <div class="section-content">
+          <h2>Want to have some trivia to kill time?</h2>
+          <button class="button" id="button2" onclick="makeTrivia()">Click me!</button>
+          <div id="trivia"></div>
+        </div>
+      </div>
+      <div class="section">
+        <div class="section-content">
+          <h2>Want to get some jokes?</h2>
+          <button class="button" onclick="makeJoke()">Click me!</button>
+          <!-- HTML code to display the joke -->
+          <div id="joke"></div>
+        </div>
+      </div>
+    
+    </div>
+    <div id="myModal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <div class = "wrapper">
+          <div class = "quiz-container">
+              <div class = "quiz-head">
+                  <h1 class = "quiz-title">Quiz Game</h1>
+                  <div class = "quiz-score flex">
+                      <span id = "correct-score"></span>/<span id = "total-question"></span>
+                  </div>
+              </div>
+              <div class = "quiz-body">
+                  <h2 class = "quiz-question" id = "question"></h2>
+                  <ul class = "quiz-options">
+                  </ul>
+                  <div id = "result">
+                  </div>
+              </div>
+              <div class = "quiz-foot">
+                  <button type = "button" id = "check-answer">Check Answer</button>
+                  <button type = "button" id = "play-again">Play Again</button>
+              </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src = "modal.js"></script>
+    <script src = "triviaController.js"></script>
+  </body>
+</html>
